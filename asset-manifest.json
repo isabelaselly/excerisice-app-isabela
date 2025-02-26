@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/excerisice-app-isabela/static/css/main.d12cb1bb.css",
+    "main.js": "/excerisice-app-isabela/static/js/main.61b15191.js",
+    "static/js/453.83f27793.chunk.js": "/excerisice-app-isabela/static/js/453.83f27793.chunk.js",
+    "index.html": "/excerisice-app-isabela/index.html",
+    "main.d12cb1bb.css.map": "/excerisice-app-isabela/static/css/main.d12cb1bb.css.map",
+    "main.61b15191.js.map": "/excerisice-app-isabela/static/js/main.61b15191.js.map",
+    "453.83f27793.chunk.js.map": "/excerisice-app-isabela/static/js/453.83f27793.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d12cb1bb.css",
+    "static/js/main.61b15191.js"
+  ]
+}
