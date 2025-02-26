@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #87CEEB, #F0E68C);
+  color: #000000;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #0e0909;
+}
+
+div {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Button Styles */
+button {
+  background-color: #ffb6c1; 
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff6f61; /* Coral color on hover */
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+}
+
+
+.exercise-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgb(0, 0, 0); /* Slight translucent white for depth */
+  border-radius: 15px;
+}
+
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 5px;
+  border: 1px solid #ff6f61;
+}
+
+input[type="text"] {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ffb6c1;
+}
+
+.count {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
