@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import RepetitionExercise from "./components/RepetitionExercise";
 import DurationExercise from "./components/DurationExercise";
-import RunningExercise from "./components/RunningExercise"; // Corrected import
+import RunningExercise from "./components/RunningExercise";
+
+export const exercises = [
+  { name: "Push-ups", type: "repetition", suggestedExercise: "Jump Rope" },
+  { name: "Jump Rope", type: "duration", suggestedExercise: "Running" },
+  { name: "Running", type: "duration", suggestedExercise: "Plank" },
+  { name: "Plank", type: "repetition", suggestedExercise: "Push-ups" },
+];
 
 const App = () => {
   const [selectedExercise, setSelectedExercise] = useState(null);
 
-  const exercises = [
-    { name: "Push-ups", type: "repetition" },
-    { name: "Running", type: "running" }, // Change "duration" to "running"
-    { name: "Jumping Jacks", type: "repetition" },
-    { name: "Plank", type: "duration" },
-  ];
+  const navigateToExercise = (exerciseName) => {
+    const exercise = exercises.find((ex) => ex.name === exerciseName);
+    setSelectedExercise(exercise);
+  };
 
   return (
     <div>
@@ -21,7 +26,7 @@ const App = () => {
         <div>
           <h2>Select an Exercise:</h2>
           {exercises.map((exercise) => (
-            <button key={exercise.name} onClick={() => setSelectedExercise(exercise)}>
+            <button key={exercise.name} onClick={() => navigateToExercise(exercise.name)}>
               {exercise.name}
             </button>
           ))}
@@ -31,13 +36,30 @@ const App = () => {
       {selectedExercise && (
         <div>
           {selectedExercise.type === "repetition" ? (
-            <RepetitionExercise name={selectedExercise.name} />
-          ) : selectedExercise.type === "running" ? ( // Check for "running" type
-            <RunningExercise name={selectedExercise.name} /> // Render RunningExercise
+            <RepetitionExercise 
+              name={selectedExercise.name}
+              suggestedExercise={selectedExercise.suggestedExercise}
+              onNavigate={navigateToExercise}
+              onHome={() => setSelectedExercise(null)}
+              onBack={() => setSelectedExercise(null)}
+            />
+          ) : selectedExercise.type === "running" ? (
+            <RunningExercise 
+              name={selectedExercise.name}
+              suggestedExercise={selectedExercise.suggestedExercise}
+              onNavigate={navigateToExercise}
+              onHome={() => setSelectedExercise(null)}
+              onBack={() => setSelectedExercise(null)}
+            />
           ) : (
-            <DurationExercise name={selectedExercise.name} />
+            <DurationExercise 
+              name={selectedExercise.name}
+              suggestedExercise={selectedExercise.suggestedExercise}
+              onNavigate={navigateToExercise}
+              onHome={() => setSelectedExercise(null)}
+              onBack={() => setSelectedExercise(null)}
+            />
           )}
-          <button onClick={() => setSelectedExercise(null)}>Go Back</button>
         </div>
       )}
     </div>

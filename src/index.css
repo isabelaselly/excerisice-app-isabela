@@ -30,7 +30,6 @@ div {
   text-align: center;
 }
 
-/* Button Styles */
 button {
   background-color: #ffb6c1; 
   border: none;
@@ -55,7 +54,7 @@ button:focus {
 .exercise-container {
   margin-top: 30px;
   padding: 20px;
-  background: rgb(0, 0, 0); /* Slight translucent white for depth */
+  background: rgb(255, 255, 255); /* Slight translucent white for depth */
   border-radius: 15px;
 }
 

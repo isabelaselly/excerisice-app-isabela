@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DurationExercise = ({ name }) => {
+const DurationExercise = ({ name, suggestedExercise, onNavigate, onHome, onBack }) => {
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
 
@@ -26,8 +26,14 @@ const DurationExercise = ({ name }) => {
       </p>
       <button onClick={startTimer} disabled={running}>Start</button>
       <button onClick={() => setTime(0)}>Reset</button>
+      
+      {/* Navigation buttons */}
+      <button onClick={onBack}>Go Back</button>
+      <button onClick={() => onNavigate(suggestedExercise)}>Suggested: {suggestedExercise}</button>
+      <button onClick={onHome}>Home</button>
     </div>
   );
 };
 
 export default DurationExercise;
+
